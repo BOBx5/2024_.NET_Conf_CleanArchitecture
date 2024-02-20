@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<InvariantGlobalization>false</InvariantGlobalization>
+		<UserSecretsId>f58ea6c5-c47e-4fbf-86fa-6b88b663ddac</UserSecretsId>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+		<DockerfileContext>..\..\..</DockerfileContext>
+	</PropertyGroup>
+
+	<!--XML 도큐먼트 자동 생성-->
+	<PropertyGroup>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<NoWarn>$(NoWarn);CS1591</NoWarn>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="MediatR" Version="12.2.0" />
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.5" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\02. Domain\LibrarySolution.Domain\LibrarySolution.Domain.csproj" />
+		<ProjectReference Include="..\..\03. Application\LibrarySolution.Application\LibrarySolution.Application.csproj" />
+		<ProjectReference Include="..\..\04. Infrastructure\LibrarySolution.Infrastructure.DateTimeProvider\LibrarySolution.Infrastructure.DateTimeProvider.csproj" />
+		<ProjectReference Include="..\..\04. Infrastructure\LibrarySolution.Infrastructure.EmailService\LibrarySolution.Infrastructure.EmailService.csproj" />
+		<ProjectReference Include="..\..\04. Infrastructure\LibrarySolution.Infrastructure.Persistence\LibrarySolution.Infrastructure.Persistence.csproj" />
+	</ItemGroup>
+
+</Project>

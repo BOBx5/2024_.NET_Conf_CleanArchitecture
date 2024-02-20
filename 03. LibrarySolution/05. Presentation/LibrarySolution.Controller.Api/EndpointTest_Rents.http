@@ -1,0 +1,25 @@
+﻿@LibrarySolution.Controller.Api_HostAddress = http://localhost:32783
+
+// 대여 목록 조회
+GET {{LibrarySolution.Controller.Api_HostAddress}}/api/rents
+
+###
+// 대여 생성
+POST {{LibrarySolution.Controller.Api_HostAddress}}/api/rents
+Content-Type: application/json
+
+{
+    "bookId": 1,
+    "userId": 1
+}
+
+###
+@rentId = ""
+// 대여 연장
+PUT {{LibrarySolution.Controller.Api_HostAddress}}/api/rents/{rentId}/Extend
+
+###
+// 반납
+PUT {{LibrarySolution.Controller.Api_HostAddress}}/api/rents/{rentId}/Return
+
+###

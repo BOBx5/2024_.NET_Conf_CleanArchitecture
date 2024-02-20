@@ -1,0 +1,34 @@
+﻿@LibrarySolution.Controller.Api_HostAddress = http://localhost:32783
+
+// 유저 목록 조회
+GET {{LibrarySolution.Controller.Api_HostAddress}}/api/users
+
+###
+// 특정 유저 조회
+GET {{LibrarySolution.Controller.Api_HostAddress}}/api/users/{userId}
+
+###
+// 유저 생성
+POST {{LibrarySolution.Controller.Api_HostAddress}}/api/users
+Content-Type: application/json
+
+{
+    "name": "유저2",
+    "email": "user2@gmail.com"
+}
+
+###
+// 유저 정보 수정
+PUT {{LibrarySolution.Controller.Api_HostAddress}}/api/users
+Content-Type: application/json
+
+{
+    "name": "홍길동",
+    "email": "greatTheif@gmail.com"
+}
+
+###
+// 유저 삭제
+DELETE {{LibrarySolution.Controller.Api_HostAddress}}/api/users
+
+###

@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Aggregates\AggregateTemplate\**" />
+    <EmbeddedResource Remove="Aggregates\AggregateTemplate\**" />
+    <None Remove="Aggregates\AggregateTemplate\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\01. Shared\LibrarySolution.Shared\LibrarySolution.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR.Contracts" Version="2.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Aggregates\Books\Enums\" />
+  </ItemGroup>
+
+</Project>

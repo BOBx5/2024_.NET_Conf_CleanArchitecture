@@ -1,0 +1,43 @@
+﻿@LibrarySolution.Controller.Api_HostAddress = http://localhost:32783
+
+// 도서 목록 조회
+GET {{LibrarySolution.Controller.Api_HostAddress}}/api/books
+
+###
+// 도서 정보 조회
+GET {{LibrarySolution.Controller.Api_HostAddress}}/api/books/{bookId}
+
+###
+// 도서 생성
+POST {{LibrarySolution.Controller.Api_HostAddress}}/api/books
+Content-Type: application/json
+
+{
+      "title": "제목2",
+      "description": "설명2",
+      "author": "저자2",
+      "quantity": 2
+}
+
+###
+// 도서 정보 수정
+@bookId = 4452424d-f26b-4c8a-9434-9a7aa953dea8
+PUT {{LibrarySolution.Controller.Api_HostAddress}}/api/books
+Content-Type: application/json
+
+{
+    "bookId": "{{bookId}}",
+    "title": "제목2",
+    "description": "설명2",
+    "author": "작가2"
+}
+
+###
+// 도서 삭제
+DELETE {{LibrarySolution.Controller.Api_HostAddress}}/api/books
+Content-Type: application/json
+
+{
+    "bookId": "{{bookId}}"
+}
+###
